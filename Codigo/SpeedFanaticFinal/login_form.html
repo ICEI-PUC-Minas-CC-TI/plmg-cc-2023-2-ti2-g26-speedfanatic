@@ -1,0 +1,19 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Formulário de Login</title>
+    </head>
+    <body>
+        <h1>Formulário de Login</h1>
+        <form action="/user/login" method="post">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+            <br>
+            <input type="submit" value="Entrar">
+        </form>
+            <p>Nao possui uma conta? <a href="/user/register">Cadastre</a>.</p>
+    </body>
+    </html>

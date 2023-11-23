@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!--NavBar-->
+        <div class="navbar">
+            <nav class="navigation hide" id="navigation">
+                <span class="close-icon" id="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="forums.html">Fóruns</a></li>
+                    <li class="nav-item"><a href="posts.html">Fóruns da comunidade</a></li>
+                    <li class="nav-item"><a href="detail.html">Chat</a></li>
+                </ul>
+            </nav>
+            <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+            <div class="brand">Fórum</div>
+        </div>
+        <!--SearchBox-->
+        <div class="search-box">
+            <div class="search-container">
+                <select id="search-options">
+                    <option value="geral">Geral</option>
+                    <option value="titulo">Título</option>
+                    <option value="descricao">Descrição</option>
+                </select>
+                <input type="text" id="search-input" placeholder="Pesquisar">
+                <button id="search-button">Buscar</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+    </header>
+    <div class="container">
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Geral</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-globe center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Assuntos diveros</a></h4>
+                    <p>Descrição Conteúdo: Local para bate papo sobre assuntos diversos, fora do mundo da F1.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+        </div>
+        <!--Mais-->
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Pilotos</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-user "></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Estreantes promissores</a></h4>
+                    <p>Descrição do Conteúdo: Discuta sobre os pilotos mais jovens e talentosos que estão fazendo suas estreias na Fórmula 1 e as expectativas que cercam suas carreiras.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-user "></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Pilotos Lendários</a></h4>
+                    <p>Descrição do Conteúdo:  Discuta pilotos lendários da Fórmula 1, como Michael Schumacher, Ayrton Senna, Juan Manuel Fangio e outros que deixaram uma marca duradoura no esporte.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-user "></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Técnica de pilotagem</a></h4>
+                    <p>Discuta as diferentes técnicas de pilotagem usadas por pilotos de F1, como frenagem, curvas, estratégias de ultrapassagem e como elas evoluíram ao longo dos anos.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-user "></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Rivalidades memoráveis</a></h4>
+                    <p>Descrição do Conteúdo: Analise rivalidades históricas entre pilotos, como a rivalidade entre Senna e Prost ou entre Hamilton e Rosberg, e como essas rivalidades moldaram o esporte.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-user "></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Pilotos contemporâneos</a></h4>
+                    <p>Descrição do Conteúdo: Aborde os pilotos atuais da Fórmula 1, como Lewis Hamilton, Max Verstappen, Charles Leclerc e outros, e como eles estão moldando o cenário competitivo atual da categoria.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="subforum">
+            <div class="subforum-title">
+                <h1>Circuitos</h1>
+            </div>
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-road center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Circuitos Favoritos</a></h4>
+                    <p>Descrição do conteúdo: Discuta qual são os melhores cirtcuitos da F1.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-road center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="post.html">Circuitos icônicos</a></h4>
+                    <p>Descrição do conteúdo: Discuta os circuitos mais icônicos da Fórmula 1, como Monza, Spa-Francorchamps, Silverstone e Mônaco, destacando sua história, desafios únicos e momentos memoráveis.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-road center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Futuro dos circuitos</a></h4>
+                    <p>Descrição do conteúdo: Discuta as mudanças e inovações planejadas para os circuitos de Fórmula 1, como a introdução de novos circuitos, reformas em circuitos existentes, questões ambientais e segurança nas pistas.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+            <hr class="subforum-devider">
+            <div class="subforum-row">
+                <div class="subforum-icon subforum-column center">
+                    <i class="fa fa-road center"></i>
+                </div>
+                <div class="subforum-description subforum-column">
+                    <h4><a href="posts.html">Novos circuitos</a></h4>
+                    <p>Descrição do conteúdo: Explore os novos circuitos que foram introduzidos na Fórmula 1 nos últimos anos, como o Circuito das Américas em Austin, Texas, ou o Circuito de Yas Marina em Abu Dhabi, e como eles se comparam aos circuitos mais tradicionais.</p>
+                </div>
+                <div class="subforum-stats subforum-column center">
+                    <span>//número de posts | //número de Tópicos</span>
+                </div>
+                <div class="subforum-info subforum-column">
+                    <b><a href="">Último post</a></b> by <a href="">Usarname</a> 
+                    <br>em <small>//data de postagem</small>
+                </div>
+            </div>
+
+           
+        
+
+    <!-- Forum Info -->
+    <div class="forum-info">
+        <div class="chart">
+            Status do Fórum &nbsp;<i class="fa fa-bar-chart"></i>
+        </div>
+        <span><u>// numero de posts</u> postados em <u>//numero de topicos</u> tópicos por <u>//numero de usuarios</u> usuários.</span><br>
+        <span>Último post: <b><a href="">//link do post</a></b> //data do post <a href="">Usarname</a></span>.<br>
+    </div>
+
+    <footer>
+        <span>&copy;  SpeedFanatic</span>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

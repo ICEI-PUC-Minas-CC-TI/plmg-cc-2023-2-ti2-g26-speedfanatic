@@ -1,0 +1,27 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wallpaperaccess.com/full/8385556.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.h0 {
+    font-size: 500%;
+}
+
+footer {
+    flex-shrink: 0;
+}

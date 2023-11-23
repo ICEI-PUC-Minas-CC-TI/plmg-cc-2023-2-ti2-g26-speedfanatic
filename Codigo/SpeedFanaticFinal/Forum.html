@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+    
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <link rel="icon" href="https://cdn.icon-icons.com/icons2/41/PNG/128/f1_formula1_6833.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+               <a class="navbar-brand" href="index.html">Speed Fanatic</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/equipe/list/1">Equipes</a>
+                        <a class="nav-link" href="/piloto/list/1">Pilotos</a>
+                        <a class="nav-link" href="/circuitos/list/1">Circuitos</a>
+                        <a class="nav-link" href="/forum">Fórum</a>
+                        <a class="nav-link" href="/perfil">Perfil</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+</body>
+</html>
+<script>
+	 document.addEventListener("DOMContentLoaded", function() {
+            // Função para mostrar a área de resposta com base no ID
+            function showReply(replyAreaId) {
+                const replyArea = document.getElementById(replyAreaId);
+                if (replyArea) {
+                    replyArea.style.display = "block";
+                }
+            }
+
+            // Adicione um evento de clique aos botões "Responder" com a chamada da função showReply
+            const replyButtons = document.querySelectorAll(".comment button");
+            replyButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    const replyAreaId = button.getAttribute("data-reply-area-id");
+                    showReply(replyAreaId);
+                });
+            });
+        });
+	document.addEventListener("DOMContentLoaded", function() {
+    const newTopicButton = document.getElementById("new-topic-button");
+    const topicInput = document.getElementById("topic-input");
+    const topicText = document.getElementById("topic-text");
+    const submitTopic = document.getElementById("submit-topic");
+
+    newTopicButton.addEventListener("click", function() {
+        // Mostrar a área de digitação quando o botão for pressionado
+        topicInput.style.display = "block";
+    });
+});
+	        document.addEventListener("DOMContentLoaded", function() {
+            // Função para mostrar a área de comentário com base no ID
+            function showComment(commentAreaId) {
+                const commentArea = document.getElementById(commentAreaId);
+                if (commentArea) {
+                    commentArea.style.display = "block";
+                }
+            }
+
+            // Adicione um evento de clique aos botões "Comente" com a chamada da função showComment
+            const commentButtons = document.querySelectorAll(".comment button");
+            commentButtons.forEach(function(button) {
+                button.addEventListener("click", function() {
+                    const commentAreaId = button.getAttribute("data-comment-area-id");
+                    showComment(commentAreaId);
+                });
+            });
+        });
+	function showComment(){
+    var commentArea = document.getElementById("comment-area");
+    commentArea.classList.remove("hide");
+}
+function onLoad() {
+    if(document.getElementById("msg").value != ""){
+      alert(document.getElementById("msg").value);
+    }
+}
+	//NavBar
+function hideIconBar(){
+    var iconBar = document.getElementById("iconBar");
+    var navigation = document.getElementById("navigation");
+    iconBar.setAttribute("style", "display:none;");
+    navigation.classList.remove("hide");
+}
+
+function showIconBar(){
+    var iconBar = document.getElementById("iconBar");
+    var navigation = document.getElementById("navigation");
+    iconBar.setAttribute("style", "display:block;");
+    navigation.classList.add("hide");
+}
+
+//Comentario
+function showComment(){
+    var commentArea = document.getElementById("comment-area");
+    commentArea.classList.remove("hide");
+}
+
+//Resposta
+function showReply(){
+    var replyArea = document.getElementById("reply-area");
+    replyArea.classList.remove("hide");
+}
+</script>
+<body onload="onLoad()">
+	<input type="hidden" id="msg" name="msg" value="">
+        <UM-POST>
+	<br>
+	<LISTAR-POST>
+<style>
+body {
+    height: 100%;
+    margin: 0;
+    color: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wallpaperaccess.com/full/8385556.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.h0 {
+    font-size: 500%;
+}
+
+footer {
+    flex-shrink: 0;
+}
+/* ########################################### */
+/*                 Global                      */
+/* ########################################### */
+*{
+    box-sizing: border-box;
+}
+
+/* Estilo da barra de pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo do seletor de opções de busca */
+#search-options {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Estilo do campo de entrada */
+#search-input {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Estilo do botão de pesquisa */
+#search-button {
+    background-color: #a9220a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilize o botão quando o mouse estiver sobre ele */
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+
+html{
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+    background-color:rgb(35, 35, 35);
+    color:#FEFEFE;
+}
+
+a{
+    color:#ff0000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size:16px;
+    font-weight: bolder;
+}
+
+
+/* ########################################### */
+/*           Forums.html                       */
+/* ########################################### */
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum{
+    margin-top:20px;
+}
+
+.subforum-title{
+    background-color:#292B2E;
+    padding: 5px;
+    border-radius: 5px;
+    margin:4px;
+}
+
+.subforum-row{
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.subforum-column{
+    padding: 10px;
+    margin:4px;
+    border-radius: 5px;
+    background-color:#111314;
+}
+
+.subforum-description *{
+    margin-block: 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon i{
+    font-size: 45px;
+}
+
+.subforum-devider{
+    display: none;
+}
+
+
+/* For the smartphones */
+@media screen and (max-width: 460px) {
+    .container{
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+
+    .subforum-devider{
+        display: block;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(190, 190, 190, 0), rgba(255, 255, 255, 0.75), rgba(190, 190, 190, 0));
+    }
+
+
+
+  }
+
+/* For the tablets */
+@media screen and (min-width: 460px) and (max-width: 1024px) {
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .subforum-row{
+        display: grid;
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+
+    .subforum-icon i{
+        font-size: 35px;
+    }
+
+    html{
+        font-size: 14px;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+
+  }
+/*   Header Section    */
+
+header{
+    margin-inline: 10px;
+}
+  /* Nav Bar styles */
+.navbar{
+    display:flex;
+    align-items: center;
+}
+.navigation{
+    background-color:#b70606;
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right:10px;
+}
+
+.close-icon i{
+    font-size:60px;
+    float: left;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style-type:none;
+    overflow: hidden;
+}
+
+.nav-item a{
+    float: right;
+    display:block;
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    color:#fff;
+}
+
+.nav-item a:hover{
+    background-color: rgb(0,0,0,0.1);
+}
+
+.hide{
+    display: none;
+}
+
+.bar-icon{
+    font-size: 60px;
+    display: inline-block;
+    margin-right:10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family:aquire;
+    src:url(aquire.otf);
+}
+
+.brand{
+    font-size:60px;
+    display: inline-block;
+    font-family:aquire;
+}
+
+/*Navbar for the smartphones*/
+@media screen and (max-width: 460px){
+    .navigation{
+        max-height: auto;
+    }
+
+    .close-icon i{
+        font-size:30px;
+    }
+
+    .nav-item a{
+        float:left;
+        display:inline;
+        margin-inline: 3px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+
+    .bar-icon{
+        font-size: 30px;
+    }
+
+    .brand{
+        font-size:20px;
+    }
+}
+
+  /* Search Box styles */
+.search-box{
+
+
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+
+}
+
+.search-box select{
+    padding: 10px;
+}
+
+.search-box input{
+    padding: 10px;
+}
+
+.search-box button{
+    padding: 10px;
+    background-color:#fff;
+    color:#000000;
+}
+
+.search-box button:hover{
+    background-color: #000000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/* search box for smrtphones */
+@media screen and (max-width: 460px){
+    .search-box input, .search-box button, .search-box select{
+        min-width: 300px;
+        margin-top: 5px;
+    }
+
+}
+
+/* forum info Styling */
+.forum-info{
+    padding: 20px;
+    background-color: #111314;
+}
+
+.chart{
+    font-size:20px;
+    font-weight:bold;
+}
+/* Footer Styling */
+
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    background-color:  #b70606;
+    display: block;
+    text-align: center;
+}
+
+/* ########################################### */
+/*            posts.html                       */
+/* ########################################### */
+
+/* posts table's head  */
+.table-head{
+    display: flex;
+}
+
+.table-head div{
+    padding: 5px;
+    margin: 2px;
+    background-color: #2C2C2C;
+    font-weight: bold;
+}
+
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/* posts table's body  */
+
+.table-row{
+    display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply{
+    padding: 5px;
+    margin: 2px;
+    background-color: #131415;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/* navigation path*/
+.navigate{
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #fff;
+}
+
+.navigate a:hover{
+    color:#FF0042;
+    font-weight: bolder;
+}
+
+/* Pagination*/
+
+.pagination{
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a{
+    color: #fff;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.pagination a:hover{
+    opacity: 0.5;
+}
+
+.note{
+    background-color:#111314;
+    padding: 20px;
+    display: block;
+}
+
+.note span{
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+
+/* ########################################### */
+/*            detail.html                      */
+/* ########################################### */
+
+.head{
+    display: flex;
+    background-color: #2C2C2C;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors{
+    flex: 20%;
+}
+
+.content{
+    flex: 80%;
+}
+
+.body{
+    display: flex;
+    background-color: #131415;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .authors .username{
+    font-size: 20px;
+}
+
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+
+.body .content .comment button{
+    background-color: #db3434; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto no botão */
+    padding: 10px 20px; /* Espaçamento interno (topo/baixo, esquerda/direita) */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor para parecer um link clicável */
+    transition: background-color 0.3s ease; /* Efeito de transição de cor ao passar o mouse */
+}
+
+/* comment section */
+.comment-area{
+    margin-bottom:50px;
+}
+
+.comment-area textarea{
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover{
+    border: solid 1px #000000;
+}
+</style>
