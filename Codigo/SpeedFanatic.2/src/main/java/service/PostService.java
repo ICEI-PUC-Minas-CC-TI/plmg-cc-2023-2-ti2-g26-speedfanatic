@@ -139,7 +139,7 @@ public class PostService {
 			  p[i] = postDAO.getLastPost(i+2);
 			}
        			  umPost+= "  <div class=\"forum-container\">\n"
-       			  		+ "                <div class=\"criar-assunto\">\n"
+       			  		+ "                <div class=\"criar-assunto row w-75 justify-content-center mt-5\">\n"
        			  		+ "                    <button  class=\"btn btn-outline-light w-50 mb-3 \" id=\"new-topic-button\">Inserir Novo Tópico</button>\n"
        			  		+ "                    <div id=\"topic-input\" style=\"display: none\">\n"
        			  	    +"                       <form action=\"/post/insert\" method=\"post\" class=\"row justify-content-center\">\n"
@@ -501,20 +501,20 @@ public class PostService {
 		umPost += "\t\t\t<td>&nbsp;</td>";
 		umPost += "\t\t</tr>";
 		umPost += "\t</table>";
-		umPost += "<div class=\"comment\">\n"
-	             + "                    <button data-comment-area-id=\"comment-area-1\">Comentar</button>\n"
+		umPost += "<div class=\"comment row justify-content-center w-100 mt-4\">\n"
+	             + "                    <button class=\"btn btn-danger w-25\" data-comment-area-id=\"comment-area-1\">Comentar</button>\n"
 	             + "                </div>\n"
 	             + "            </div>\n"
 	             + "        </div>\n"
 	             + "    </div>"
 	      		+ "         <form action=\"/resposta/insert\" method=\"post\" class=\"row justify-content-center\">\n"
 	      		+ "        <div class=\"comment-area hide\" id=\"comment-area-1\">\n"
-	      		+ "            <input type=\"text\" class=\"form-control w-75 mb-3\" id=\"conteudo\" name=\"conteudo\" required>\n"
+	      		+ "            <input type=\"text\" class=\"form-control w-75 my-4\" id=\"conteudo\" name=\"conteudo\" required>\n"
 	      		+ "            <br>\n"
 	      		+ "            <input type=\"hidden\" id=\"categoria\" name=\"categoria\" value=\""+post.getCategoria()+"\">\n"
 	      		+ "            <input type=\"hidden\" id=\"resp_pai\" name=\"resp_pai\" value=\"0\">\n"
 	      		+ "            <input type=\"hidden\" id=\"post\" name=\"post\" value=\""+post.getID()+"\">\n"
-	      		+ "            <button id=\"submit\">Enviar</button>\n"
+	      		+ "            <button class=\"btn btn-danger ms-5\" id=\"submit\">Enviar</button>\n"
 	      		+ "        </div>\n"
 	      		+ "    </form>\n";
 	

@@ -141,6 +141,7 @@
 	        post("/perfil/update", (request, response) -> userService.update(request, response)); 
 	        post("/forum/1", (request, response) -> userService.updateNota(request, response)); 
 	        post("/resposta/insert", (req, res) -> respostaService.insert(req, res));
+	        post("/piloto/troca", (request, response) -> userService.updatePiloto(request, response)); 
 	      
 	   /*         String textoResposta = req.body();
 	            System.out.println(textoResposta);

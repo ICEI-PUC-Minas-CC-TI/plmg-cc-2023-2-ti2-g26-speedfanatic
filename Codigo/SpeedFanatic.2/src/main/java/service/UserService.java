@@ -236,6 +236,29 @@ public class UserService {
             throw new RuntimeException("Erro ao criar hash MD5", e);
         }
     }
+    public Object updatePiloto(Request request, Response response) {
+        User user = userDAO.get(request.session().attribute("user_id"));
+        int id = Integer.parseInt(request.queryParams("id"));
+        System.out.println("id: "+ id+ "Piloto: "+ user.getPiloto());
+        String resp = "";
+        
+        if (user != null) {
+        	user.setPiloto(id);
+        	
+            userDAO.update(user);
+            System.out.println("Nota: "+ user.getPiloto());
+            response.status(200); // 200 OK
+            resp = "Usuário (ID " + user.getID() + ") atualizado!";
+            response.redirect("/forum");
+        } else {
+            response.status(404); // 404 Not Found
+            resp = "Usuário (ID " + user.getID() + ") não encontrado!";
+            response.redirect("/perfil");
+        }
+
+        makeForm(FORM_UPDATE);
+        return 	form.replaceFirst("<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"\">", "<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"" + resp + "\">");
+    }
     public Object login(Request request, Response response) {
         String username = request.queryParams("email");
         String senha = request.queryParams("senha");

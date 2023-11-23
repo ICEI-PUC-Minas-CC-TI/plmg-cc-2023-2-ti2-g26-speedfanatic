@@ -114,7 +114,9 @@ public class PilotoService {
 							+ "                                <div class=\"text-light h4\">"+c.getPais()+"</div>\n"
 							+ "                            </div>\n"
 							+ "                            <div class=\"col\">\n"
-							+ "                                <button class=\"btn btn-outline-light\">Favoritar</button>\n"
+							+ "                           <form action=\"/piloto/troca\" method=\"post\">"
+							+ "                             <input  class=\"btn btn-outline-light w-50 mb-3\" type=\"submit\" name=\"id\" value=\""+c.getId()+"\">\n"
+							+"\"</form>\""
 							+ "                            </div>\n"
 							+ "                        </div>\n";
 				}
