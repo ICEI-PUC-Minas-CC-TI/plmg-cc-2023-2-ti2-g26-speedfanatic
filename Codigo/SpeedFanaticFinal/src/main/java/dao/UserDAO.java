@@ -171,8 +171,9 @@ public class UserDAO extends DAO {
                     rs.getDate("user_data_criacao").toLocalDate(),
                     rs.getInt("user_piloto"),
                     rs.getInt("user_equipe"),
-                    rs.getInt("User_nota")
+                    rs.getInt("user_nota")
                 );
+                System.out.println("NOTA NO LOGIN" +user.getNota());
                 
                 // Crie um token JWT e armazene-o na sessão
                 String token = criarTokenJWT(user);

@@ -20,7 +20,7 @@ public class User {
         dataCriacao = LocalDate.now();
         piloto = 1;
         equipe = 1;
-        nota = 0;
+        nota = 3;
     }
 
     public User(int id, String username, String email, String senha, LocalDate dataCriacao, int piloto, int equipe, int nota) {
@@ -31,6 +31,7 @@ public class User {
         setDataCriacao(dataCriacao);
         setPiloto(piloto);
         setEquipe(equipe);
+        setNota(nota);
     }
 
     public int getID() {

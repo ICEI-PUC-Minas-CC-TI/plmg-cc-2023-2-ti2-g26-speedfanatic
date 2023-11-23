@@ -356,10 +356,9 @@ public class RespostaService {
         }
         }
         else
+        {
         	System.out.println("Texto nao aprovado");
-        int n = request.session().attribute("user_nota");
-        request.session().attribute("user_nota", n-1);
-        }
+        
         User user = userDAO.get(request.session().attribute("user_id"));
         System.out.println("NOTA ANTES: " +user.getNota());
         int temp = user.getNota()-1;
@@ -367,6 +366,9 @@ public class RespostaService {
         System.out.println("NOTA DEPOIS: " + user.getNota());
         userDAO.update(user);
         response.redirect("/forum");
+        }
+        }
+        
         makeFormChain(post, "", "");
         resp = "Resposta (" + conteudo + ") não aprovada!";
         return form.replaceFirst("<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"\">", "<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"" + resp + "\">");

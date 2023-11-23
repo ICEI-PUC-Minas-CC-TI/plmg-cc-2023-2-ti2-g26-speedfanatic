@@ -604,9 +604,9 @@ public class PostService {
         user.setNota(temp-1);
         System.out.println("NOTA DEPOIS: " + user.getNota());
         userDAO.update(user);
-        }
-        }
         response.redirect("/forum");
+        }
+        }
 		makeFormHp(4);
 		return form.replaceFirst("<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"\">", "<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\""+ resp +"\">");
 	
