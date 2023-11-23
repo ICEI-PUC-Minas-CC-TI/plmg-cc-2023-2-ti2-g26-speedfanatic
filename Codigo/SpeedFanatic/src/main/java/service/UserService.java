@@ -1,21 +1,26 @@
 package service;
 
 import dao.UserDAO;
+import model.Piloto;
 import model.Post;
 import model.User;
 import spark.Request;
 import spark.Response;
-
+import dao.PilotoDAO;
 import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
+import dao.EquipeDAO;
+import model.Equipe;
 
 public class UserService {
 
     private UserDAO userDAO = new UserDAO();
+    private PilotoDAO pilotoDAO = new PilotoDAO();
+    private EquipeDAO equipeDAO = new EquipeDAO();
     private String form;
     private final int FORM_INSERT = 3;
     private final int FORM_UPDATE = 2;
@@ -143,10 +148,10 @@ public class UserService {
             		+ "                </div>\n"
             		+ "                <div class=\"row py-4 border-top border-light\">\n"
             		+ "                    <div class=\"row\">\n"
-            		+ "                        <div class=\"text-light h4\">Piloto: "+ user.getPiloto()+"</div>\n"
+            		+ "                        <div class=\"text-light h4\">Piloto: "+ pilotoDAO.get(user.getPiloto())+"</div>\n"
             		+ "                    </div>\n"
             		+ "                    <div class=\"row\">\n"
-            		+ "                        <div class=\"text-light h4\">Equipe "+ user.getEquipe()+"</div>\n"
+            		+ "                        <div class=\"text-light h4\">Equipe "+ equipeDAO.get(user.getEquipe())+"</div>\n"
             		+ "                    </div>\n"
             		+ "                </div>\n"
             		+ "            </div>\n"
