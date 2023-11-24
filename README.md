@@ -1,4 +1,4 @@
-# [Nome do projeto]
+# [SpeedFanatic]
 
 SpeedFanatic é um portal intuitivo para os amantes de Fórmula 1. Estamos aqui para oferecer facilidade de acesso às informações sobre o esporte, permitindo que até mesmo os novatos se sintam à vontade em mergulhar nesse mundo.
 A missão da SpeedFanatic é democratizar o acesso ao universo da Fórmula 1, tornando-o acessível e compreensível até mesmo para aqueles que estão dando os primeiros passos nesse emocionante mundo. Nossa abordagem centrada no usuário garante que tanto os novatos quanto os fãs mais experientes se sintam em casa, proporcionando uma jornada informativa e emocionante por trás do volante da principal categoria do automobilismo mundial. Com a SpeedFanatic, a Fórmula 1 se torna não apenas um esporte, mas uma paixão compartilhada e acessível a todos os que desejam vivenciar a velocidade, a estratégia e a emoção das pistas.
@@ -19,4 +19,4 @@ A missão da SpeedFanatic é democratizar o acesso ao universo da Fórmula 1, to
 
 ## Instruções de utilização
 
-[Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.]
+[Para utilizar a aplicação, é necessario utilizar uma IDE que aceite java, como o Eclipse, e inserir a pasta presente na pasta código como um projeto maven. Após essa inserção, rodar o arquivo "Aplicacao.java" e abrir em qualquer navegador o url "localhost:6789]
