@@ -337,7 +337,7 @@ public class RespostaService {
         int categoria = Integer.parseInt(request.queryParams("categoria"));
         String resp = "";
         int tmp = request.session().attribute("user_nota");
-        if(tmp > 0)
+        if(tmp >= 0)
         {
         boolean textoAprovado = verificarTextoModerador(conteudo);
         Resposta resposta = new Resposta(1, conteudo, post, usuario, resppai, data, categoria);
@@ -364,10 +364,11 @@ public class RespostaService {
         user.setNota(temp);
         System.out.println("NOTA DEPOIS: " + user.getNota());
         userDAO.update(user);
-        response.redirect("/forum");
-        }
-        }
+        request.session().attribute("user_nota", user.getNota());
         
+        }
+        }
+        response.redirect("/forum");
         makeFormChain(post, "", "");
         resp = "Resposta (" + conteudo + ") não aprovada!";
         return form.replaceFirst("<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"\">", "<input type=\"hidden\" id=\"msg\" name=\"msg\" value=\"" + resp + "\">");

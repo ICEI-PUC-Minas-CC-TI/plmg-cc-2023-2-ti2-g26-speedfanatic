@@ -42,7 +42,7 @@ public class UserDAO extends DAO {
             st.setTimestamp(4, Timestamp.valueOf(user.getDataCriacao().atStartOfDay()));
             st.setInt(5, user.getPiloto());
             st.setInt(6, user.getEquipe());
-            st.setInt(7, 3);
+            st.setInt(7, 0);
             st.executeUpdate();
             st.close();
             status = true;
