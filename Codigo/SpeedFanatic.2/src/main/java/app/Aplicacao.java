@@ -40,13 +40,7 @@
 	    
 	    private static PilotoService pilotoService = new PilotoService();
 	    
-	    private static final String subscriptionKey = "270d010b411140d68c67f46ac838e902";
-	    private static final String endpoint = "https://moderadorforum.cognitiveservices.azure.com/contentmoderator/moderate/v1.0/ProcessText/Screen";
-	    private static File textFile = new File("src/main/resources/TextModeration.txt");
-	    
-	    private static ContentModeratorClient client = ContentModeratorManager.authenticate(AzureRegionBaseUrl.fromString(endpoint),
-	            subscriptionKey);
-	      
+
 	    private static boolean usuarioEstaAutenticado(Request request) {
 	        
 	        
@@ -97,11 +91,11 @@
 	                response.redirect("/user/pagina/1"); // Redireciona para a página de login se o usuário não estiver autenticado
 	            }
 	        });
-	     /*   before("/resposta/insert", (request, response) -> {
+	        before("/resposta/insert", (request, response) -> {
 	            if (!usuarioEstaAutenticado(request)) {
 	                response.redirect("/user/pagina/1"); // Redireciona para a página de login se o usuário não estiver autenticado
 	            }
-	        });*/
+	        });
 	        before("/post/list:orderby", (request, response) -> {
 	            if (!usuarioEstaAutenticado(request)) {
 	                response.redirect("/user/pagina/1"); // Redireciona para a página de login se o usuário não estiver autenticado
@@ -126,40 +120,23 @@
 	        
 	        
 	        
-	        // Corrigir o mapeamento das rotas para UserService
+	   
 	        post("/user/register", (request, response) -> userService.insert(request, response));
 	        get("/user/pagina/:orderby", (request, response) -> userService.getAll(request, response));
 	        post("/user/login", (request, response) -> userService.login(request,response));
 	        get("/user/edit", (request, response) -> userService.getToEdit(request, response));
 	        before("/perfil", (request, response) -> {
 	            if (!usuarioEstaAutenticado(request)) {
-	                response.redirect("/user/pagina/1"); // Redireciona para a página de login se o usuário não estiver autenticado
+	                response.redirect("/user/pagina/1"); 
 	            }
 	        });
 	        get("/perfil", (request, response) -> userService.getToUpdate(request, response));
-	       // post("/user/update/:id", (request, response) -> userService.update(request,response));
 	        post("/perfil/update", (request, response) -> userService.update(request, response)); 
 	        post("/forum/1", (request, response) -> userService.updateNota(request, response)); 
 	        post("/resposta/insert", (req, res) -> respostaService.insert(req, res));
 	        post("/piloto/troca", (request, response) -> userService.updatePiloto(request, response)); 
 	      
-	   /*         String textoResposta = req.body();
-	            System.out.println(textoResposta);
-	
-	            // Verifica se o texto é válido usando o Azure Content Moderator
-	            boolean textoAprovado = verificarTextoModerador(textoResposta);
-	
-	            // Se o texto for aprovado, insere a resposta no serviço
-	            if (textoAprovado) {
-	            	System.out.println(req.body());
-	                respostaService.insert(req, res);
-	                res.redirect("/forum");  // Redireciona para uma página de sucesso
-	            } else {
-	                res.redirect("/forum");  // Redireciona para uma página de erro
-	            }
-	
-	            return null;  // Indica que a resposta já foi tratada
-	        });*/
+	        
 	        
 	        get("/post/:id", (request, response) -> respostaService.getAll(request, response));
 			get("/circuitos/list/:pagina", (request,response) -> circuitoService.getAll(request,response));

@@ -115,21 +115,21 @@ public class RespostaService {
          }
          else
         	 list+="  \n"
-         		+ "         <div class=\"comments-container\">\n"
-         		+ "        <div class=\"body\">\n"
-         		+ "            <div class=\"authors\">\n"
-         		+ "                <div class=\"username\"> "+ r.getUsuario()+"</div>\n"
-         		+ "            </div>\n"
-         		+ "            <div class=\"content\">\n"
-         		+ "                Comentário:\n"
-         		+ "                <br>"+r.getConteudo()+"\n"
-         		+ "                <br><br>\n"
-         		+ "                <div class=\"comment\">\n"
-         		+ "                    <button data-reply-area-id=\"reply-area-"+i+"\">Responder</button>\n"
-         		+ "                </div>\n"
-         		+ "            </div>\n"
-         		+ "        </div>\n"
-         		+ "    </div>\n"
+        			 + "         <div class=\"comments-container\" style=\"width: 75%; margin-left: auto; margin-right: 0;\"> \n"
+              		+ "        <div class=\"body\">\n"
+              		+ "            <div class=\"authors\">\n"
+              		+ "                <div class=\"username\"> "+ r.getUsuario()+"</div>\n"
+              		+ "            </div>\n"
+              		+ "            <div class=\"content\">\n"
+              		+ "                Comentário:\n"
+              		+ "                <br>"+r.getConteudo()+"\n"
+              		+ "                <br><br>\n"
+              		+ "                <div class=\"comment\">\n"
+              		+ "                    <button data-reply-area-id=\"reply-area-"+i+"\">Responder</button>\n"
+              		+ "                </div>\n"
+              		+ "            </div>\n"
+              		+ "        </div>\n"
+              		+ "    </div>\n"
          		+ "\n"
          		+ "    <!-- Área de Resposta 2 -->\n"
          		+ "    <form action=\"/resposta/insert\" method=\"post\" class=\"row justify-content-center\">\n"
@@ -326,7 +326,6 @@ public class RespostaService {
             e.printStackTrace();
         }
 
-        // Em caso de erro, assume que o texto não é aprovado
         return false;
     }
     public Object insert(Request request, Response response) {

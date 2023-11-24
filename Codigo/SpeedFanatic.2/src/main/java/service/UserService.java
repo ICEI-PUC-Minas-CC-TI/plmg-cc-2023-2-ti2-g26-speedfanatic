@@ -148,10 +148,10 @@ public class UserService {
             		+ "                </div>\n"
             		+ "                <div class=\"row py-4 border-top border-light\">\n"
             		+ "                    <div class=\"row\">\n"
-            		+ "                        <div class=\"text-light h4\">Piloto: "+ pilotoDAO.get(user.getPiloto())+"</div>\n"
+            		+ "                        <div class=\"text-light h4\">Piloto: "+ pilotoDAO.get(user.getPiloto()).getNome()+"</div>\n"
             		+ "                    </div>\n"
             		+ "                    <div class=\"row\">\n"
-            		+ "                        <div class=\"text-light h4\">Equipe "+ equipeDAO.get(user.getEquipe())+"</div>\n"
+            		+ "                        <div class=\"text-light h4\">Equipe "+ equipeDAO.get(user.getEquipe()).getNome()+"</div>\n"
             		+ "                    </div>\n"
             		+ "                </div>\n"
             		+ "            </div>\n"
@@ -186,13 +186,8 @@ public class UserService {
         String username = request.queryParams("nome");
        String email = request.queryParams("email");
         String senha = request.queryParams("senha");
-       // LocalDate dataCriacao = LocalDate.parse(request.queryParams("dataCriacao"));
-       // int piloto = Integer.parseInt(request.queryParams("piloto"));
-       // int equipe = Integer.parseInt(request.queryParams("equipe"));
 
         String resp = "";
-
-        //User user = new User(1, username, email, senha, dataCriacao, piloto, equipe);
         User user = new User();
         user.setEmail(email);
         user.setUsername(username);
