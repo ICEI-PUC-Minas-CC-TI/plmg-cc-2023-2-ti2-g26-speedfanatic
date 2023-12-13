@@ -1,31 +1,27 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Speed Fanatic
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Marçal Lima
+    given-names: Pedro
+  - family-names: Ribeiro Maia
+    given-names: Pedro
+  - family-names: Polanski de Freitas Vieira
+    given-names: Diego
+  - family-names: de Almeida Santos
+    given-names: Guilherme
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Soares Vieira de Vasconcelos
+    given-names: Amália
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Cardoso Brandão
+    given-names: Wladmir
 keywords:
-  - 
-  - 
-repository-code: 
+  - Automobilismo
+  - Formula 1
+repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g26-speedfanatic.git
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
